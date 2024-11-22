@@ -2,8 +2,10 @@ import { useState } from "react";
 import "./App.css";
 import TodoForm from "./components/TodoForm";
 import TodoListWrapper from "./components/TodoListWrapper";
+import { useSelector } from "react-redux";
 
 function App() {
+const a= useSelector((state) => state.a)
   // TODO: useState 로 되어 있는 부분을 redux 전역상태관리로 리팩터링 해보세요.
   // initialState 에 있는 더미 데이터는 제거하셔도 좋습니다.
   const [todos, setTodos] = useState([

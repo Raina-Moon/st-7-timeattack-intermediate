@@ -25,8 +25,8 @@ export default function TodoList({ todos, setTodos, isDone }) {
           <TodoItem
             key={todo.id}
             todo={todo}
-            toggleTodoItem={toggleTodoItem}
-            deleteTodoItem={deleteTodoItem}
+            toggleTodoItem={toggleTodoItem}//todoSlice 'toggleTodo' => dispatch(toggleTodo(todo.id))
+            deleteTodoItem={deleteTodoItem}//todoSlice 'deleteTodo' => dispatch(deleteTodo(todo.id)) => button
           />
         ))}
       </ul>
